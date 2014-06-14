@@ -1,1 +1,23 @@
 jqHotKeys
+
+A simple jQuery module to act as a controller for Hotkey combinations.
+
+Can be called by using jqHotKeys.initModule();
+
+Triggers can be be sent by calling jqHotKeys.register( trigger_map )
+
+When register triggers, requires a JSON object formatted as
+such:
+	keycode - numerical key representing key pressed in jquery
+		event object
+	element - ID or class of the element to trigger the event on
+		if this key is null, will trigger on window.
+	trigger - Name of the jQuery event to trigger.
+	data - Optional data to pass into the triggered event
+	shift - Boolean indicating whether shift must be pressed
+	ctrl - Boolean indicating whether ctrl must be pressed
+	meta - Boolean indicating whether Alt or Command must be pressed
+
+jqHotKeys.pause() will halt responses to listening
+jqHotKeys.resume() will resume responses
+jqHotKeys.clear() will clear all triggers.
